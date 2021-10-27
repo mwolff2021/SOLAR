@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamVR", "SteamVR.csproj", "{4E45F685-4DC3-B315-8141-D02266F3F9D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{5B5F5FAF-CEFA-BC3B-06D4-9D2C2D6D4BD3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{F5E9CC97-7342-BE0C-DA3A-67E8F904B669}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{5B5F5FAF-CEFA-BC3B-06D4-9D2C2D6D4BD3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamVR_Input_Editor", "SteamVR_Input_Editor.csproj", "{1F9506EC-1604-3F6E-BED1-9DF1F5C165EB}"
 EndProject
@@ -25,14 +25,14 @@ Global
 		{4E45F685-4DC3-B315-8141-D02266F3F9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E45F685-4DC3-B315-8141-D02266F3F9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E45F685-4DC3-B315-8141-D02266F3F9D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5B5F5FAF-CEFA-BC3B-06D4-9D2C2D6D4BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B5F5FAF-CEFA-BC3B-06D4-9D2C2D6D4BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B5F5FAF-CEFA-BC3B-06D4-9D2C2D6D4BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B5F5FAF-CEFA-BC3B-06D4-9D2C2D6D4BD3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F5E9CC97-7342-BE0C-DA3A-67E8F904B669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F5E9CC97-7342-BE0C-DA3A-67E8F904B669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5E9CC97-7342-BE0C-DA3A-67E8F904B669}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5E9CC97-7342-BE0C-DA3A-67E8F904B669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B5F5FAF-CEFA-BC3B-06D4-9D2C2D6D4BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B5F5FAF-CEFA-BC3B-06D4-9D2C2D6D4BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B5F5FAF-CEFA-BC3B-06D4-9D2C2D6D4BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B5F5FAF-CEFA-BC3B-06D4-9D2C2D6D4BD3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1F9506EC-1604-3F6E-BED1-9DF1F5C165EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1F9506EC-1604-3F6E-BED1-9DF1F5C165EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F9506EC-1604-3F6E-BED1-9DF1F5C165EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
