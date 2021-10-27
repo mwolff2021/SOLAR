@@ -17,3 +17,4 @@ https://stackoverflow.com/questions/17936325/cannot-use-local-variable-before-it
 https://answers.unity.com/questions/1094230/how-do-you-change-the-colour-of-individual-particl.html
 https://answers.unity.com/questions/1259080/changing-individual-color-of-particles-by-c-script.html
 https://www.howtogeek.com/723921/how-to-copy-urls-of-all-open-tabs-in-firefox/
+https://stackoverflow.com/questions/23754148/unity-particle-system-cannot-appear-in-game-scene
