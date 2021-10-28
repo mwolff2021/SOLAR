@@ -26,8 +26,8 @@ public class DataPlotter : MonoBehaviour
     private int colorIterator = 0;
     private ParticleSystem particles;
     private ParticleSystem.Particle[] ps;
-    //int numPoints = 406893;
-    int numPoints = 40000; 
+    int numPoints = 406893;
+    //int numPoints = 40000; 
     // Use this for initialization
     void Start()
     {
