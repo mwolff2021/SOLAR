@@ -1,5 +1,62 @@
 # SOLAR
 
+11/02/21 resources: 
+
+https://www.google.com/search?client=firefox-b-1-d&sxsrf=AOaemvJ8dwj7_5MILdbbobQwFVcVcc_wHw:1635872231048&q=Unity+flight+controller+script&sa=X&
+ved=2ahUKEwiHqur5kvrzAhU1mGoFHdbPAtMQ1QJ6BAgzEAE&biw=1284&bih=932
+
+https://gist.github.com/FreyaHolmer/650ecd551562352120445513efa1d952
+
+https://www.reddit.com/r/Unity3D/comments/7whhrj/how_to_create_an_arcadey_fps_flight_controller/
+
+https://github.com/brihernandez/UnityCommon/blob/master/Assets/ShipPhysics/ShipPhysics.cs
+
+https://keithmaggio.wordpress.com/2011/07/01/unity-3d-code-snippet-flight-script/
+
+https://forum.unity.com/threads/vive-controller-trigger-press.567997/
+
+https://docs.unity3d.com/560/Documentation/Manual/OpenVRControllers.html
+
+https://answers.unity.com/questions/1460335/htc-vive-detect-how-far-a-trigger-has-been-pulledh.html
+
+https://docs.unity3d.com/Manual/XRPluginArchitecture.html
+
+https://www.youtube.com/c/VRwithAndrew/videos
+
+https://answers.unity.com/questions/1625384/how-to-access-vive-controllers-in-a-script-attache.html
+
+https://partner.steamgames.com/doc/features/steamvr/input
+
+https://steamcommunity.com/games/250820/announcements/detail/3809361199426010680
+
+https://valvesoftware.github.io/steamvr_unity_plugin/articles/SteamVR-Input.html
+
+https://unity3d.college/2016/11/16/steamvr-controller-input/
+
+https://www.google.com/search?q=jetpack+basic+script+c%23&client=firefox-b-1-d&sxsrf=AOaemvLjy24TzFKOAOlXHWAayB1ktX1KTA%3A1635875328693&ei=AHqBYabdKbmiqtsP9PaloAk&
+oq=jetpack+basic+script+c%23&gs_lcp=Cgdnd3Mtd2l6EAM6BwgjELADECc6BwgAEEcQsAM6BAgjECdKBAhBGABQnh5YrCVg8CdoAXACeACAAWSIAbEBkgEDMS4xmAEAoAEByAEJwAEB&sclient=gws-wiz&
+ved=0ahUKEwim3fO-nvrzAhU5kWoFHXR7CZQQ4dUDCA4&uact=5
+
+https://github.com/mwolff2021/SOLAR
+
+https://assetstore.unity.com/packages/tools/flight-navigation-for-htc-vive-controller-61830#reviews
+
+https://unity3d.college/2017/07/11/vr-movement-ironman-jetpack-flying-with-steamvr/
+
+https://www.youtube.com/watch?v=-T09oRMDuG8
+
+https://wirewhiz.com/quick-tip-manually-controlling-the-vr-camera-in-unity-steamvr/
+
+https://medium.com/pintsizedrobotninja/moving-around-in-vr-teleportation-26303cb675f8
+
+https://docs.sumerian.amazonaws.com/tutorials/create/beginner/teleporting-vr/
+
+https://github.com/IJEMIN/Simple-Unity-VR-Teleporter/tree/master/Assets/VRTeleporter
+
+https://forum.unity.com/threads/moving-the-camera.437919/
+
+https://www.howtogeek.com/723921/how-to-copy-urls-of-all-open-tabs-in-firefox/
+
 10/27/21 resources: 
 
 https://stackoverflow.com/questions/35909129/particles-to-create-star-field-in-unity
