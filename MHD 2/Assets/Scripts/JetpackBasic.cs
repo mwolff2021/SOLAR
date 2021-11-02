@@ -2,31 +2,22 @@ using UnityEngine;
 
 public class JetpackBasic : MonoBehaviour
 {
-    private Rigidbody body;
-    private SteamVR_TrackedController controller;
+	private SteamVR_TrackedController _controller;
 
-    [SerializeField]
-    private float thrustMultipler = 14f;
+	private void OnEnable()
+	{
+		_controller = GetComponent<SteamVR_TrackedController>();
+	
+	}
 
-    [SerializeField]
-    private float maxVelocity = 100f;
+	private void OnDisable()
+	{
+		_controller.TriggerClicked -= HandleTriggerClicked;
+	}
 
-    private void OnEnable()
-    {
-        controller = GetComponent<SteamVR_TrackedController>();
-        body = transform.GetComponentInParent<Rigidbody>(); ;
-    }
+	private void HandleTriggerClicked(object sender, ClickedEventArgs e)
+	{
+		Debug.Log("trigger clicked"); 
+	}
 
-    private void FixedUpdate()
-    {
-        var thrust = controller.controllerState.rAxis1.x;
-
-        if (thrust > 0.1)
-        {
-            var forceVector = transform.forward * thrust * thrustMultipler;
-            body.AddForce(forceVector);
-
-            //SteamVR_Controller.Input((int)controller.controllerIndex).TriggerHapticPulse((ushort)(200f * thrust));
-        }
-    }
 }

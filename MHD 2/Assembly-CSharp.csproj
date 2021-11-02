@@ -61,12 +61,13 @@
     <Compile Include="Assets\OptiTrack\Plugins\Managed\NatNetLib\Client.cs" />
     <Compile Include="Assets\Scripts\DataPlotter.cs" />
     <Compile Include="Assets\OptiTrack\Scripts\OptitrackStreamingClient.cs" />
+    <Compile Include="Assets\VRnavigationBasicThrust\scripts\NavigationBasicThrust.cs" />
     <Compile Include="Assets\OptiTrack\Scripts\OptitrackRigidBody.cs" />
     <Compile Include="Assets\OptiTrack\Scripts\OptitrackSkeletonAnimator.cs" />
     <Compile Include="Assets\Stellar Sky\Demo\CameraController.cs" />
     <Compile Include="Assets\Scripts\SteamVR_TrackedController.cs" />
     <Compile Include="Assets\Scripts\JetpackBasic.cs" />
-    <Compile Include="Assets\VRnavigationBasicThrust\scripts\NavigationBasicThrust.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\OptiTrack\Plugins\x86_64\NatNetLib.dll" />
