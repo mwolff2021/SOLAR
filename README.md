@@ -1,5 +1,17 @@
 # SOLAR
 
+11/04/21 resources: 
+
+https://assetstore.unity.com/packages/tools/flight-navigation-for-htc-vive-controller-61830#reviews
+
+https://answers.unity.com/questions/32940/rigidbodyaddforce-is-not-working.html
+
+https://wirewhiz.com/quick-tip-manually-controlling-the-vr-camera-in-unity-steamvr/
+
+https://www.reddit.com/r/VRplugins/comments/4esxrt/question_how_do_i_manipulate_the_camera_using/
+
+https://forum.unity.com/threads/steamvr-plugin-what-is-responsible-for-moving-the-camera-in-response-to-hmd-movement.455963/
+
 11/02/21 resources: 
 
 https://www.google.com/search?client=firefox-b-1-d&sxsrf=AOaemvJ8dwj7_5MILdbbobQwFVcVcc_wHw:1635872231048&q=Unity+flight+controller+script&sa=X&
