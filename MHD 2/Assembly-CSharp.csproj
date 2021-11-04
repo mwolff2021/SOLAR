@@ -56,24 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\OptiTrack\Plugins\Managed\NatNetLib\Native.cs" />
     <Compile Include="Assets\Scripts\CSVReader.cs" />
-    <Compile Include="Assets\OptiTrack\Plugins\Managed\NatNetLib\Client.cs" />
     <Compile Include="Assets\Scripts\DataPlotter.cs" />
-    <Compile Include="Assets\OptiTrack\Scripts\OptitrackStreamingClient.cs" />
-    <Compile Include="Assets\VRnavigationBasicThrust\scripts\NavigationBasicThrust.cs" />
-    <Compile Include="Assets\OptiTrack\Scripts\OptitrackRigidBody.cs" />
-    <Compile Include="Assets\OptiTrack\Scripts\OptitrackSkeletonAnimator.cs" />
-    <Compile Include="Assets\Stellar Sky\Demo\CameraController.cs" />
-    <Compile Include="Assets\Scripts\SteamVR_TrackedController.cs" />
-    <Compile Include="Assets\Scripts\JetpackBasic.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\NavigationBasicThrust.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\OptiTrack\Plugins\x86_64\NatNetLib.dll" />
-    <None Include="Assets\OptiTrack\Plugins\x86\NatNetLib.dll" />
     <None Include="Assets\SolarVoxelShader.shader" />
-    <None Include="Assets\OptiTrack\README_OptiTrack_Unity.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -736,6 +725,10 @@
     <ProjectReference Include="SteamVR_Editor.csproj">
       <Project>{104A39E3-BDF8-8B01-6BF7-CFC72471C81E}</Project>
       <Name>SteamVR_Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Actions.csproj">
+      <Project>{1F64B80D-A30F-EA6D-A545-8C0CFA093595}</Project>
+      <Name>SteamVR_Actions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
