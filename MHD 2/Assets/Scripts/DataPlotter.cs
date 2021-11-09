@@ -26,14 +26,69 @@ public class DataPlotter : MonoBehaviour
     private int colorIterator = 0;
     private ParticleSystem particles;
     private ParticleSystem.Particle[] ps;
-    int numPoints = 406893;
-    //int numPoints = 40000; 
+    private Color[] particleColors;
+    //int numPoints = 406893;
+    int numPoints = 40000;
+    int updateCounter = 0;
+    int updateMax = 1200; 
+    /*
+        Debug.Log(updateCounter);
+        if (updateCounter % 60 == 0) {
+            particles = gameObject.GetComponent<ParticleSystem>();
+            particles.GetParticles(ps);
+            for (int i = 0; i<numPoints; i++)
+            {
+                ps[i].startColor = Color.Lerp(Color.clear, particleColors[i], (float) updateCounter/updateMax); ;
+            }
+particles.SetParticles(ps, numPoints);
+        }
+        updateCounter++;
+    }
+
+ Debug.Log(updateCounter);
+if (updateCounter % 60 == 0)
+{
+    particles = gameObject.GetComponent<ParticleSystem>();
+    particles.GetParticles(ps);
+    for (int i = 0; i < numPoints; i++)
+    {
+        if (particleColors[i].a > (float)updateCounter / updateMax)
+        {
+            ps[i].startColor = Color.Lerp(Color.clear, particleColors[i], (float)updateCounter / updateMax); ;
+        }
+    }
+    particles.SetParticles(ps, numPoints);
+}
+updateCounter++;*/
+void Update()
+    {
+        Debug.Log(updateCounter);
+        //if (updateCounter % 60 == 0) {
+            particles = gameObject.GetComponent<ParticleSystem>();
+            particles.GetParticles(ps);
+        for (int i = 0; i < numPoints; i++)
+        {
+            ps[i].startColor = Color.Lerp(Color.clear, particleColors[i], particleColors[i].a);
+        }
+             
+            particles.SetParticles(ps, numPoints);
+        //}
+        updateCounter++;
+    }
+
     // Use this for initialization
     void Start()
     {
         particles = gameObject.GetComponent<ParticleSystem>();
 
+        //particles.GetParticles(ps);
         ps = new ParticleSystem.Particle[numPoints]; 
+
+
+        var col = particles.colorOverLifetime;
+        col.enabled = true;
+
+        particleColors = new Color[numPoints];
 
         pointList = CSVReader.Read(inputfile);
        
@@ -53,9 +108,16 @@ public class DataPlotter : MonoBehaviour
                 (float)colors[colorIterator, 2] / 255, 
                 (float)opacity);
             ps[i].startColor = particleColor;
+            particleColors[i] = particleColor; 
             ps[i].position = new Vector3(x, y, z);
-            ps[i].size = 20.0f; 
+            ps[i].size = 20.0f;
 
+            /*Gradient grad = new Gradient(); 
+            grad.SetKeys(new GradientColorKey[] { new GradientColorKey(particleColor, 0.0f), new GradientColorKey(particleColor, 1.0f)}, new GradientAlphaKey[] { new GradientAlphaKey(0.0f, 0.0f), new GradientAlphaKey(opacity, 1.0f) });
+            ps[i].color = grad; */
+            //ps[i].remainingLifetime = 20;
+            //visually recvealing new parts of the data 
+            //basically just trying to show time varying data
         }
 
         particles.SetParticles(ps, numPoints); 
