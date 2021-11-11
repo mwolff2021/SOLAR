@@ -1,5 +1,30 @@
 # SOLAR
 
+11/11/21 resources: 
+https://docs.python.org/3/library/csv.html
+https://www.geeksforgeeks.org/writing-csv-files-in-python/
+https://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html
+https://answers.unity.com/questions/37875/turning-the-particle-system-on-and-off.html
+https://answers.unity.com/questions/1386600/changing-particlesystem-attributes-at-runtime.html
+https://docs.unity3d.com/ScriptReference/ParticleSystem.MainModule-startLifetime.html
+
+11/09/21 resources: 
+
+https://docs.unity3d.com/ScriptReference/ParticleSystem-colorOverLifetime.html
+https://docs.unity3d.com/ScriptReference/GradientAlphaKey.html
+https://docs.unity3d.com/ScriptReference/ParticleSystem.GetParticles.html
+https://docs.unity3d.com/ScriptReference/ParticleSystem.Particle.html
+https://docs.unity3d.com/ScriptReference/ParticleSystem.SetParticles.html
+https://doc.babylonjs.com/divingDeeper/particles/particle_system/tuning_gradients
+https://answers.unity.com/questions/604246/how-to-change-the-color-of-particle-system.html
+https://answers.unity.com/questions/314338/can-i-change-particle-color-over-time-with-script.html
+https://blender.stackexchange.com/questions/8052/how-do-i-get-particles-to-change-color-over-time
+https://answers.unity.com/questions/1259080/changing-individual-color-of-particles-by-c-script.html
+https://answers.unity.com/questions/1094230/how-do-you-change-the-colour-of-individual-particl.html
+https://docs.unity3d.com/Manual/ParticleSystems.html
+https://docs.unity3d.com/ScriptReference/Color.Lerp.html
+https://gamedevbeginner.com/the-right-way-to-lerp-in-unity-with-examples/
+
 11/04/21 resources: 
 
 https://assetstore.unity.com/packages/tools/flight-navigation-for-htc-vive-controller-61830#reviews
