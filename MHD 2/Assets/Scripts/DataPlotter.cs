@@ -8,16 +8,18 @@ public class DataPlotter : MonoBehaviour
 {
 
     // Name of the input file, no extension
-    public string inputfile = "emission_data_scaled_8";
-
+    //public string inputfile = "emission_data_scaled_8";
+    public string inputfile = "temp";
+    public string inputfile2 = "temp_28";
 
     // List for holding data from CSV reader
-    private List<Dictionary<string, object>> pointList;
+    private List<Dictionary<string, object>> pointList, pointList2;
     // Indices for columns to be assigned
     public int columnX = 0;
     public int columnY = 1;
     public int columnZ = 2;
     public int columnEmit = 3;
+    public string opacityColumn = "a";
    
     //public GameObject solar; 
     public System.Random rnd = new System.Random(); 
@@ -26,9 +28,12 @@ public class DataPlotter : MonoBehaviour
     private int colorIterator = 0;
     private ParticleSystem particles;
     private ParticleSystem.Particle[] ps;
+    ParticleSystem.Particle[] ps2; 
     private Color[] particleColors;
+    private Color[] particleColors2;
     //int numPoints = 406893;
-    int numPoints = 40000;
+    //int numPoints = 40000;
+    int numPoints = 13180;
     int updateCounter = 0;
     int updateMax = 1200; 
     /*
@@ -63,7 +68,7 @@ updateCounter++;*/
 void Update()
     {
         Debug.Log(updateCounter);
-        //if (updateCounter % 60 == 0) {
+        /*//if (updateCounter % 60 == 0) {
             particles = gameObject.GetComponent<ParticleSystem>();
             particles.GetParticles(ps);
         for (int i = 0; i < numPoints; i++)
@@ -73,7 +78,13 @@ void Update()
              
             particles.SetParticles(ps, numPoints);
         //}
-        updateCounter++;
+        updateCounter++;*/
+        if (updateCounter == 1200)
+        {
+            Debug.Log("switching now");
+            particles.SetParticles(ps2, numPoints);
+        }
+        updateCounter++; 
     }
 
     // Use this for initialization
@@ -82,26 +93,32 @@ void Update()
         particles = gameObject.GetComponent<ParticleSystem>();
 
         //particles.GetParticles(ps);
-        ps = new ParticleSystem.Particle[numPoints]; 
+        ps = new ParticleSystem.Particle[numPoints];
+        ps2 = new ParticleSystem.Particle[numPoints];
 
 
         var col = particles.colorOverLifetime;
         col.enabled = true;
 
         particleColors = new Color[numPoints];
+        particleColors2 = new Color[numPoints];
 
         pointList = CSVReader.Read(inputfile);
-       
+        pointList2 = CSVReader.Read(inputfile2);
+
+        float maxValue = FindMaxValue("a");
+        //Debug.Log(maxValue);
        
         //Instantiate(PointPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         for (var i = 0; i < numPoints; i++)
         {
-            Debug.Log("i: " + i.ToString());
+            //Debug.Log("i: " + i.ToString());
             // Get value in poinList at ith "row", in "column" Name
             float x = System.Convert.ToSingle(pointList[i]["x"]);
             float y = System.Convert.ToSingle(pointList[i]["y"]);
             float z = System.Convert.ToSingle(pointList[i]["z"]);
-            float opacity = System.Convert.ToSingle(pointList[i]["binned"]);
+            float opacity = (System.Convert.ToSingle(pointList[i][opacityColumn])/maxValue);
+            //Debug.Log("opacity" + opacity);
             colorIterator = rnd.Next(0, 38);
             Color particleColor = new Color((float)colors[colorIterator, 0] / 255,
                 (float)colors[colorIterator, 1] / 255, 
@@ -119,6 +136,34 @@ void Update()
             //visually recvealing new parts of the data 
             //basically just trying to show time varying data
         }
+
+        for (var i = 0; i < numPoints; i++)
+        {
+            //Debug.Log("i: " + i.ToString());
+            // Get value in poinList at ith "row", in "column" Name
+            float x = System.Convert.ToSingle(pointList2[i]["x"]);
+            float y = System.Convert.ToSingle(pointList2[i]["y"]);
+            float z = System.Convert.ToSingle(pointList2[i]["z"]);
+            float opacity = (System.Convert.ToSingle(pointList2[i][opacityColumn]) / maxValue);
+            //Debug.Log("opacity" + opacity);
+            colorIterator = rnd.Next(0, 38);
+            Color particleColor = new Color((float) 255 / 255,
+                (float)colors[colorIterator, 1] / 255,
+                (float)colors[colorIterator, 2] / 255,
+                (float)opacity);
+            ps2[i].startColor = particleColor;
+            particleColors2[i] = particleColor;
+            ps2[i].position = new Vector3(x, y, z);
+            ps2[i].size = 20.0f;
+
+            /*Gradient grad = new Gradient(); 
+            grad.SetKeys(new GradientColorKey[] { new GradientColorKey(particleColor, 0.0f), new GradientColorKey(particleColor, 1.0f)}, new GradientAlphaKey[] { new GradientAlphaKey(0.0f, 0.0f), new GradientAlphaKey(opacity, 1.0f) });
+            ps[i].color = grad; */
+            //ps[i].remainingLifetime = 20;
+            //visually recvealing new parts of the data 
+            //basically just trying to show time varying data
+        }
+
 
         particles.SetParticles(ps, numPoints); 
     }

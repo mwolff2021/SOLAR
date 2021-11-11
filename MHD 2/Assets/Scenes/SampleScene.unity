@@ -5496,11 +5496,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90025cf9a140c4542b6133dfd8a63359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputfile: emission_data_scaled_8
+  inputfile: temp
+  inputfile2: temp_28
   columnX: 0
   columnY: 1
   columnZ: 2
   columnEmit: 3
+  opacityColumn: a
 --- !u!1001 &934936744
 PrefabInstance:
   m_ObjectHideFlags: 0
