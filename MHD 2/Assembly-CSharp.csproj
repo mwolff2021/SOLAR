@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\DataPlotter.cs" />
     <Compile Include="Assets\Scripts\NavigationBasicThrust.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\EmissivityPlotter.cs" />
     <Compile Include="Assets\Scripts\Class1.cs" />
   </ItemGroup>
   <ItemGroup>
